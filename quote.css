@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.body-container-0001 {
+  display: flex;
+  justify-content: center;
+  
+  height: 100vh; /* Ajusta según sea necesario */
+}
+
+
+.container-0001 {
+  background-color: #555;
+  color: #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+  max-width: 700px;
+}
+
+.container-0001 > p {
+  font-size: 32px;
+}
+
+.question-0001 {
+  display: none;
+}
+
+.question-0001.active {
+  display: block;
+}
+
+.options-0001 {
+  position: relative;
+  padding-left: 40px;
+  display: block;
+  margin-bottom: 15px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.options-0001 input {
+  opacity: 0;
+}
+
+.checkmark-0001 {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #b9c5bd;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+}
+
+.options-0001 input:checked ~ .checkmark-0001:after {
+  display: block;
+}
+
+.checkmark-0001:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: block;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 300ms ease-in-out 0s;
+}
+
+.options-0001 input[type="radio"]:checked ~ .checkmark-0001 {
+  background: #0f7443;
+  transition: 300ms ease-in-out 0s;
+}
+
+.options-0001 input[type="radio"]:checked ~ .checkmark-0001:after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.btn-primary-0001 {
+  background-color: #2968a3;
+  color: #ddd;
+  border: 1px solid #ddd;
+}
+
+.btn-primary-0001:hover {
+  background-color: #21bf73;
+  border: 1px solid #21bf73;
+}
+
+.btn-success-0001 {
+  padding: 5px 25px;
+  background-color: #21bf73;
+  color: #fff;
+  border: none;
+}
+
+@media (max-width: 576px) {
+  .question-0001 {
+    width: 100%;
+    word-spacing: 2px;
+  }
+}
+
+
+
+
+/* Estilo navbar*/
+
+#navmenu {
+    background-color:  #5a4b4b; ; /* Color de fondo azul claro */
+    color: #000000; ; /* Color de texto blanco */
+    font-weight: bold; /* Estilo de texto en negrita */
+  }
+  
+  #navmenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #navmenu ul li {
+    display: inline;
+  }
+  
+  #navmenu ul li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  #navmenu ul li a:hover {
+    background-color: #87CEEB; /* Cambio de color al pasar el mouse */
+  }
+  
+  #navmenu ul ul {
+    display: none;
+    position: absolute;
+    background-color:  #000000; 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  
+  #navmenu ul li:hover > ul {
+    display: inherit;
+  }
+  
+  #navmenu ul ul li {
+    display: list-item;
+    position: relative;
+  }
+  
+  #navmenu ul ul li a {
+    padding: 10px 20px;
+    color: #333;
+  }
+  
+  #navmenu ul ul li a:hover {
+    background-color: #000000; 
+  }
+  
+  .mobile-nav-toggle {
+    color: #000000; /* Color de icono de menú móvil */
+    cursor: pointer;
+  }
+  
+  
+
+
+
+  .title-page-web {
+    background-color: #4d58d8; /* Color azul oscuro */
+    color: #fff; /* Letras blancas */
+    font-size: 32px; /* Tamaño de letra grande */
+    font-weight: bold; /* Estilo de letra en negrita */
+    text-align: center; /* Centrar el texto */
+    height: 200px; /* Altura de la barra */
+    line-height: 200px; /* Alinear verticalmente el texto */
+    width: 100%; /* Ocupar todo el ancho disponible */
+  }
+  

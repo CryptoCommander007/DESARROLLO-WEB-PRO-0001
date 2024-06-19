@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Survey Form</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="style1.css" rel="stylesheet">
+  <style>
+    /* Estilos personalizados pueden ir aquí */
+  </style>
+</head>
+
+<body>
+
+  <div class="container mt-sm-5 my-1">
+    <!-- Pregunta 1: Tipo de Página -->
+    <div id="page1" class="question ml-sm-5 pl-sm-5 pt-2 active" data-page="page1">
+      <div class="py-3 h5"><b>Q. ¿Qué tipo de página web necesitas?</b></div>
+      <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options1">
+        <label class="options">Landing page básico - Económica
+          <input type="radio" name="tipoPagina">
+          <span class="checkmark"></span>
+        </label>
+        <label class="options">Página web profesional avanzada
+          <input type="radio" name="tipoPagina">
+          <span class="checkmark"></span>
+        </label>
+        <label class="options">Tienda online profesional con carro de compras
+          <input type="radio" name="tipoPagina">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <!-- Botones de Navegación -->
+      <div class="d-flex align-items-center pt-3">
+        <div id="prev">
+          <button class="btn btn-primary" onclick="showPage('page1')">Anterior</button>
+        </div>
+        <div class="ml-auto mr-sm-5">
+          <button class="btn btn-success" onclick="validateAndShowPage('page1', 'page2')">Siguiente</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pregunta 2: Tipo de Industria -->
+    <div id="page2" class="question ml-sm-5 pl-sm-5 pt-4" data-page="page2">
+      <div class="py-2 h5"><b>Q. ¿En qué industria te encuentras?</b></div>
+      <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options2">
+        <label class="options">
+          <input type="radio" name="tipoIndustria"> Abogados, contadores
+          <span class="checkmark"></span>
+        </label>
+        <label class="options">
+          <input type="radio" name="tipoIndustria"> Diseñadores, gamers, redes sociales
+          <span class="checkmark"></span>
+        </label>
+        <label class="options">
+          <input type="radio" name="tipoIndustria"> Contratistas, electricistas, paisajistas
+          <span class="checkmark"></span>
+        </label>
+        <label class="options">
+          <input type="radio" name="tipoIndustria"> Médicos, dentistas, hospitales, clínicas
+          <span class="checkmark"></span>
+        </label>
+        <label class="options">
+          <input type="radio" name="tipoIndustria"> Logística, importaciones, transporte de carga
+          <span class="checkmark"></span>
+        </label>
+        <label class="options">
+          <input type="radio" name="tipoIndustria"> Masajistas, terapeutas
+          <span class="checkmark"></span>
+        </label>
+        <label class="options">
+          <input type="radio" name="tipoIndustria"> Arquitectura, diseño, construcción
+          <span class="checkmark"></span>
+        </label>
+        <label class="options">
+          <input type="radio" name="tipoIndustria"> Otro tipo de áreas
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <!-- Botones de Navegación -->
+      <div class="d-flex align-items-center pt-3">
+        <div id="prev">
+          <button class="btn btn-primary" onclick="showPage('page1')">Anterior</button>
+        </div>
+        <div class="ml-auto mr-sm-5">
+          <button class="btn btn-success" onclick="validateAndShowPage('page2', 'page3')">Siguiente</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pregunta 3: Objetivos Página Web -->
+    <div id="page3" class="question ml-sm-5 pl-sm-5 pt-4" data-page="page3">
+      <div class="py-2 h5"><b>Q. ¿Cuál es el principal objetivo que deseas alcanzar con tu página web?</b></div>
+      <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options3">
+        <label class="options">
+          <input type="radio" name="ObjetivosCliente" value="Incrementar la visibilidad y presencia en línea de mi negocio.">
+          Incrementar presencia en línea de mi negocio.
+          <span class="checkmark"></span>
+        </label>
+        <label class="options">
+          <input type="radio" name="ObjetivosCliente" value="Captar nuevos clientes o leads para mi empresa.">
+          Captar nuevos clientes para mi empresa.
+          <span class="checkmark"></span>
+        </label>
+        <label class="options">
+          <input type="radio" name="ObjetivosCliente" value="Ofrecer información detallada sobre nuestra empresa y lo que hacemos.">
+          Ofrecer información detallada sobre nuestra empresa.
+          <span class="checkmark"></span>
+        </label>
+        <label class="options">
+          <input type="radio" name="ObjetivosCliente" value="Facilitar la comunicación con clientes actuales y potenciales.">
+          Facilitar la comunicación con clientes.
+          <span class="checkmark"></span>
+        </label>
+        <label class="options">
+          <input type="radio" name="ObjetivosCliente" value="Facilitar la comunicación con clientes actuales y potenciales.">
+          Vender mis productos en linea
+          <span class="checkmark"></span>
+        </label>
+        <label class="options">
+          <input type="radio" name="ObjetivosCliente" value="Facilitar la comunicación con clientes actuales y potenciales.">
+          Otro objetivo
+          <span class="checkmark"></span>
+        </label>
+          </div>
+      <!-- Botones de Navegación -->
+      <div class="d-flex align-items-center pt-3">
+        <div id="prev">
+          <button class="btn btn-primary" onclick="showPage('page2')">Anterior</button>
+        </div>
+        <div class="ml-auto mr-sm-5">
+          <button class="btn btn-success" onclick="validateAndShowPage2('page3', 'page4')">Siguiente</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pregunta 4: Descripción de la empresa y productos ofrecidos -->
+    <div id="page4" class="question ml-sm-5 pl-sm-5 pt-4" data-page="page4">
+      <div class="py-2 h5"><b>Q. Describe tu empresa y los productos ofrecidos:</b></div>
+      <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3">
+        <textarea id="descripcionEmpresa" class="form-control" rows="5" placeholder="Escribe aquí..." required></textarea>
+      </div>
+      <!-- Botones de Navegación -->
+    <div class="d-flex align-items-center pt-3">
+      <div id="prev">
+        <button class="btn btn-primary" onclick="showPage('page3')">Anterior</button>
+      </div>
+      <div class="ml-auto mr-sm-5">
+        <button class="btn btn-success" onclick="validateAndShowPage3('page4', 'page5')">Siguiente</button>
+      </div>
+    </div>
+    </div>
+
+
+
+
+
+<!-- Página 5: Expectativas de Tiempo de Entrega -->
+<div id="page5" class="question ml-sm-5 pl-sm-5 pt-4" data-page="page5">
+  <div class="py-2 h5"><b>Q. ¿Cuáles son tus expectativas de tiempo de entrega?</b></div>
+  <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options5">
+    <label class="options">
+      <input type="radio" name="tiempoEntrega" value="Lo antes posible">
+      Lo necesito de forma inmediata
+      <span class="checkmark"></span>
+    </label>
+    <label class="options">
+      <input type="radio" name="tiempoEntrega" value="4-6 días">
+      tiempo estimado 3-7 días
+      <span class="checkmark"></span>
+    </label>
+    <label class="options">
+      <input type="radio" name="tiempoEntrega" value="6-10 días">
+      tiempo estimado 8-12 días
+      <span class="checkmark"></span>
+    </label>
+    <label class="options">
+      <input type="radio" name="tiempoEntrega" value="Otro">
+      otro periodo de tiempo
+      <span class="checkmark"></span>
+    </label>
+  </div>
+
+  <!-- Botones de Navegación -->
+  <div class="d-flex align-items-center pt-3">
+    <div id="prev">
+      <button class="btn btn-primary" onclick="showPage('page4')">Anterior</button>
+    </div>
+    <div class="ml-auto mr-sm-5">
+      <button class="btn btn-success" onclick="validateAndShowPage('page5', 'page6')">Siguiente</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Página 5: Otra Pregunta -->
+<div id="page6" class="question ml-sm-5 pl-sm-5 pt-4" data-page="page6">
+  <div class="py-2 h5"><b>Tu solicitud será revisada por uno de nuestros profesionales técnicos. Nos pondremos en contacto contigo para más detalles.</b></div>
+  <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3">
+    <!-- Contenido de la pregunta -->
+  </div>
+  <!-- Botones de Navegación -->
+  <div class="d-flex align-items-center pt-3">
+    <div class="ml-auto mr-sm-5">
+      <button class="btn btn-success" onclick="">Enviar Cotización</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Bootstrap JS y dependencias -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Script personalizado para mostrar/ocultar preguntas y validación -->
+<script>
+  function showPage(pageId) {
+    $('.question').removeClass('active'); // Oculta todas las preguntas
+    $('#' + pageId).addClass('active'); // Muestra la pregunta seleccionada
+  }
+
+  function validateAndShowPage(currentPageId, nextPageId) {
+    var radios = $('div[data-page="' + currentPageId + '"] input[type="radio"]');
+    if (radios.is(':checked')) {
+      showPage(nextPageId); // Mostrar la siguiente página si hay una opción seleccionada
+    } else {
+      alert('Por favor selecciona una opción antes de continuar.'); // Mostrar alerta si no hay opción seleccionada
+    }
+  }
+
+  function validateAndShowPage3(currentPageId, nextPageId) {
+  var textareaValue = $('#descripcionEmpresa').val().trim(); // Obtener el valor del textarea y eliminar espacios en blanco al inicio y al final
+
+  if (textareaValue.length > 0) {
+    showPage(nextPageId); // Mostrar la siguiente página si el textarea tiene contenido
+  } else {
+    alert('Por favor describe tu empresa y los productos ofrecidos antes de continuar.'); // Mostrar alerta si el textarea está vacío
+  }
+}
+
+  function validateAndShowPage2(currentPageId, nextPageId) {
+    var radios = $('div[data-page="' + currentPageId + '"] input[type="radio"]');
+    if (radios.is(':checked')) {
+      showPage(nextPageId); // Mostrar la siguiente página si hay una opción seleccionada
+    } else {
+      alert('Por favor selecciona una opción antes de continuar.'); // Mostrar alerta si no hay opción seleccionada
+    }
+  }
+
+  function validateAndShowPage4(currentPageId, nextPageId) {
+    var textareaValue = $('#descripcionEmpresa').val().trim(); // Obtener el valor del textarea y eliminar espacios en blanco al inicio y al final
+
+    if (textareaValue.length > 0) {
+      showPage(nextPageId); // Mostrar la siguiente página si el textarea tiene contenido
+    } else {
+      alert('Por favor describe tu empresa y los productos ofrecidos antes de continuar.'); // Mostrar alerta si el textarea está vacío
+    }
+  }
+</script>
+
+</body>
+
+</html>
+
+
